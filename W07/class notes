@@ -1,0 +1,47 @@
+# Auto py to exe --- What is exe???
+# can convert any program to exe file
+
+### Lists and Repetition
+
+students = ["Joey", "Emily", "Fred", "Hermione"]
+
+students[1] = "hannah"
+
+print(students)
+    # Output: "hannah" replaces "Emily" in students list 
+
+print(type(students[0]))
+    # Output: <class: 'str'>
+
+print(students[1].title())
+    # Output: Hannah
+
+for i, val in enumerate(students):
+    students[i] = val.title()
+
+print(students) 
+
+### 
+
+students = []
+user_student = input("Please enter your favorite student: ")
+students.append(user_student)
+students.append(1, user_student)
+students.clear()
+students = []
+students_copy = students.copy() # so you can return to previous copy instead of saving changes, or revert to default settings
+students.count()
+user_to_find = input("Who are you looking for? )
+print(students.count(user_to_find))
+hogwarts_students = ["hermione", "ron", "harry"]
+students.extend(hogwarts_students)
+print(students.index("Fred"))
+students.insert # only modifies list 
+students.pop(3) # removes item at specified index
+print(students.remove("joey")) # removes item at first of its indexes
+print(students.reverse()) # Output: None, reversed list printed
+students.sort() # alphabetical sort 
+print(students)
+
+# Ctr + Up or Down
+# Shift + End # to wrap lines

@@ -1,0 +1,111 @@
+{} # dictionary - stores key value pairs
+{
+    shoes size      # strings within the dictionary
+    height
+    eye color
+    SSN
+}
+
+# Boolean variables
+
+a = True/False
+
+# a list of integers
+
+[5, 6, 7, 9] # keep them the same data type
+
+# dictionary inside list
+
+students = [
+    {name: "Fred"
+    eyecolor: "blue"}
+    {name: "Jenny"
+    eyecolor: "brown"
+    numbers: [1,2,3]}
+]
+
+# to access data inside list inside dictionary
+
+students[0][eyecolor] # calls "Fred" and "eyecolor"
+
+students[1] # calls "Jenny"
+
+# possible to have a list inside a dictionary as well and a list and a dictionary inside that! Inception!
+
+students[1]["numbers"][0]["1"]
+
+# calls "Jenny" and number 1 from the numbers list. Last one??? 
+
+# use a loop to get everything out of the dictionary or list or both
+# also can use a loop to add user input into lists or dictionaries
+
+# FUNCTIONS
+
+Ex: print("hi there")
+
+def print(value to print) 
+
+x = 20
+print(f"x is {x}") vs. print("x is" + str(x))
+---
+l = 5
+w = 5
+h = 2
+
+print(l) # output: 5
+
+def compute_volume(length, width, height)
+    l = 10
+    return length * width * height
+
+volume = compute_volume(l, w, h)
+# output: 50
+
+l = compute_volume(l, w, h)
+
+print(l) # output: 5
+
+# any data done inside a function is only available inside the function
+# passing data by value not by variable reference
+    # pass arguments into parameters based on order and info inside function
+
+def main():
+    print(compute_volume(1,2,3))
+
+def compute_volume(length, width, height):
+    return length * width * height
+
+volume = compute_volume(l, w, h)
+
+print(volume) # outputs 50
+
+print(l) # outputs 5
+---
+def compute_volume(length, width, height):
+    return length * width * height, 50
+
+print(volume) # outputs (50,50) # It's a tuple!
+
+print(l) # outputs 5
+---
+def compute_volume(length, width, height):
+    return length * width * height, 50
+
+volume, l = compute_volume(l, w, h)
+
+print(volume) # outputs (50,50)
+
+print(l) # outputs 5
+---
+def compute_volume(length, width, height):
+    print(l)
+    global l # global variables are ugly, says teacher. What if you want to change back to local variable? He says.
+    # don't use global variables unless under very few conditions
+    l = 50
+    return length * width * height, 50
+
+def compute_sphere_volume(radius):
+    width = 5 # this width vari has nothing to do with width variable in compute_volume func 
+
+volume = compute_volume(l, w, h) # global vari w/in scope of func won't be changed until the function is first run. The variable will keep changing?
+
