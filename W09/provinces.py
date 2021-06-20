@@ -18,8 +18,8 @@ def main():
     # Replaces all occurences of "AB" with "Alberta" 
         ### Could also use the enumerate function to do this
     for i in range (len(text_list)):
-        if text_list[i]== "AB":
-            text_list[i]= "Alberta"
+        if text_list[i] == "AB":
+            text_list[i] = "Alberta"
 
     count_alberta = text_list.count("Alberta")
 
