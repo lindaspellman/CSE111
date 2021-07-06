@@ -24,6 +24,7 @@ def main():
         # only the day of the week, the hour, and the minute.
         print("Thank you for shopping at the Inkom Emporium.")
         print(f"{current_date_and_time:%a %b %d %I:%M:%S %Y}")
+        print()
     
     except (FileNotFoundError, PermissionError) as ex:
         print(type(ex).__name__, ex, sep=": ")
